@@ -14,6 +14,9 @@
 	--card-font: var(--secondary-font);
 	--card-font-size: 0.8em;
 	--card-font-weight: 400;
+
+	/* Smaller screen variables */
+	--nav-bar-height: 55px;
 }
 
 * {
@@ -342,6 +345,14 @@ footer {
 		display: block;
 	}
 
+	nav {
+		height: var(--nav-bar-height);
+	}
+	.nav_container{
+		height: var(--nav-bar-height);
+		padding: 0;
+	}
+
 	nav ul {
 		display: none;
 		flex-direction: column;
@@ -371,6 +382,11 @@ footer {
 		margin: 10px;
 		padding: 10px;
 	}
+
+	.card img {
+		width: 20%;
+		height: 80%;
+	}
 }
 
 /* Mobile S screens */
@@ -378,6 +394,10 @@ footer {
 
 	body {
 		font-size: x-small;
+	}
+
+	.container {
+		grid-template-columns: repeat(1, 1fr);
 	}
 
 }
