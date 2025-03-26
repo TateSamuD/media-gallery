@@ -4,7 +4,9 @@
 :root {
 	--main-color: slategray;
 	--secondary-color: rgb(58, 67, 75);
+	--color-overlay: rgba(0, 0, 0, 0.5);
 	--text-color: rgb(192, 180, 159);
+	--text-color-overlay:white;
 	--text-color-active: rgb(255, 245, 227);
 	--text-color-hover: rgb(243, 255, 227);
 	--main-font: 'Poppins', sans-serif;
@@ -63,25 +65,6 @@ nav ul {
 	padding: 0;
 }
 
-@media only screen and (max-width: 768px) {
-	.hamburger {
-		display: block;
-	}
-
-	nav ul {
-		display: none;
-		flex-direction: column;
-		background-color: var(--secondary-color);
-		position: absolute;
-		top: 100%;
-		right: 0;
-		width: 100%;
-	}
-
-	nav ul.active {
-		display: flex;
-	}
-}
 
 li {
 	border-left: 1px solid #bbb;
@@ -126,10 +109,8 @@ header {
 .carousel {
 	position: relative;
 	width: 100%;
-	max-width: 800px;
 	height: 550px;
-	margin: auto;
-	margin-top: 50px;
+	margin-top: 70px;
 	overflow: hidden;
 	background-color: var(--main-color);
 }
@@ -140,9 +121,9 @@ header {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
-	color: white;
+	color: var(--text-color-overlay);
 	z-index: 2;
-	background: rgba(0, 0, 0, 0.5);
+	background:var(--color-overlay);
 	padding: 20px;
 	border-radius: 8px;
 }
@@ -150,7 +131,7 @@ header {
 
 .container_button {
 	background: var(--primary-color);
-	color: white;
+	color: var(--text-color-overlay);
 	border: none;
 	padding: 10px 20px;
 	cursor: pointer;
@@ -204,24 +185,28 @@ header {
 	align-items: center;
 }
 
-
-.arrow {
+.dots {
 	position: absolute;
-	top: 50%;
-	background: none;
-	border: none;
-	color: white;
-	font-size: 2rem;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+	z-index: 3;
+}
+
+.dot {
+	width: 10px;
+	height: 10px;
+	background: var(--text-color);
+	border-radius: 50%;
 	cursor: pointer;
+	transition: background 0.3s;
 }
 
-.left {
-	left: 0;
-}
-
-.right {
-	right: 0;
-	margin-right: 30px;
+.dot:hover {
+	background: var(--text-color-active);
 }
 
 /* .dots {
@@ -240,6 +225,25 @@ header {
 .dot.active {
 	background: var(--secondary-color);
 } */
+
+.arrow {
+	position: absolute;
+	top: 50%;
+	background: none;
+	border: none;
+	color: var(--text-color-overlay);
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.left {
+	left: 0;
+}
+
+.right {
+	right: 0;
+	margin-right: 30px;
+}
 
 div {
 	justify-content: center;
@@ -287,8 +291,8 @@ div {
 
 /*Footer */
 footer {
-	background-color: slategray;
-	color: white;
+	background-color: var(--main-color);
+	color: var(--text-color-overlay);
 	/* display: block; */
 	clear: both;
 	width: 100%;
@@ -327,6 +331,23 @@ footer {
 		float: none;
 		max-width: 75%;
 		height: auto;
+	}
+	.hamburger {
+		display: block;
+	}
+
+	nav ul {
+		display: none;
+		flex-direction: column;
+		background-color: var(--secondary-color);
+		position: absolute;
+		top: 100%;
+		right: 0;
+		width: 100%;
+	}
+
+	nav ul.active {
+		display: flex;
 	}
 }
 
