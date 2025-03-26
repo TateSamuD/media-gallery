@@ -13,7 +13,7 @@
 	<nav>
 		<div class="nav_container">
 			<div class="logo">Gallery</div>
-			<div class="hamburger">&#9776;</div>
+			<div class="hamburger" data-toggle="nav">&#9776;</div>
 			<ul>
 				<li><a href="home.html">Home</a></li>
 				<li><a href="topic.html">Topic</a></li>
@@ -25,20 +25,19 @@
 
 	<header class="carousel">
 		<div class="carousel_container">
-			<h1>Learn about Myths</h1>
-			<button class="container_button">Learn More...</button>
+			<div class="carousel_overlay">
+				<h1>Learn about Myths</h1>
+				<button class="container_button">Learn More...</button>
+			</div>
 			<div class="carousel_control">
-				<button class="arrow left">&#8592;</button>
-				<div class="carousel_slides">
-					<img src="img/card01-annina-weber-zeus-final-001.jpg" alt="Zeus" class="slide">
-					<img src="img/card08-panchenko-andrey-cerberus-222.jpg" alt="Cerberus" class="slide">
-					<img src="img/card12-Caravaggio_-_Medusa.jpg" alt="Medusa" class="slide">
+				<div class="carousel_wrapper">
+					<div class="carousel_slides">
+						<img src="img/card01-annina-weber-zeus-final-001.jpg" alt="Zeus" class="slide">
+						<img src="img/card08-panchenko-andrey-cerberus-222.jpg" alt="Cerberus" class="slide">
+						<img src="img/card12-Caravaggio_-_Medusa.jpg" alt="Medusa" class="slide">
+					</div>
 				</div>
-				<!-- <div class="dots">
-					<span class="dot"></span>
-					<span class="dot"></span>
-					<span class="dot"></span>
-				</div> -->
+				<button class="arrow left">&#8592;</button>
 				<button class="arrow right">&#8594;</button>
 			</div>
 		</div>
@@ -55,52 +54,82 @@
 		</div>
 		<div class="card">
 			<img src="img/card02-calder-moore-entsummoning-428641-final.jpg" alt="Ent">
-			<p class="card_description"></p>
+			<p class="card_description">
+				An Ent is a tree-like creature. They are tall, slow, and patient creatures. They are also known as
+				shepherds of the trees.
+			</p>
 			<button>Learn More</button>
 		</div>
 		<div class="card">
 			<img src="img/card03-creative-assembly-kalin-popov-cyclops-poster.jpg" alt="Cyclops">
-			<p class="card_description"></p>
+			<p class="card_description">
+				The Cyclops is a one-eyed giant in Greek mythology. They are known for their strength and size. They are
+				also known for their ability to forge weapons.
+			</p>
 			<button>Learn More</button>
 		</div>
 		<div class="card">
 			<img src="img/card04-grafit-studio-pegasus-logo.jpg" alt="Pegasus">
-			<p class="card_description"></p>
+			<p class="card_description">
+				Pegasus is a winged horse in Greek mythology. He is the son of Poseidon and Medusa. He is known for his
+				speed and ability to fly.
+			</p>
 			<button>Learn More</button>
 		</div>
 		<div class="card">
 			<img src="img/card05-krzysztof-porchowski-jr-2-swift-scout-centaur.jpg" alt="Centaur">
-			<p class="card_description"></p>
+			<p class="card_description">
+				A Centaur is a creature with the upper body of a human and the lower body of a horse. They are known for
+				their speed and strength.
+			</p>
 			<button>Learn More</button>
 		</div>
 		<div class="card">
 			<img src="img/card06-magdalena-katanska-manticore07.jpg" alt="Manticore">
-			<p class="card_description"></p>
+			<p class="card_description">
+				The Manticore is a mythical creature with the body of a lion, the head of a human, and the tail of a
+				scorpion. They are known for their speed and agility.
+			</p>
 			<button>Learn More</button>
 		</div>
 		<div class="card">
 			<img src="img/card07-maria-klu-driada-2.jpg" alt="Driad">
-			<p class="card_description"></p>
+			<p class="card_description">
+				A Driad is a tree nymph in Greek mythology. They are known for their beauty and grace. They are also
+				known for their connection to nature.
+			</p>
 			<button>Learn More</button>
 		</div>
 		<div class="card">
 			<img src="img/card08-panchenko-andrey-cerberus-222.jpg" alt="Cerberus">
-			<p class="card_description"></p>
+			<p class="card_description">
+				Cerberus is a three-headed dog in Greek mythology. He is the guardian of the Underworld. He is known for
+				his ferocity and strength.
+			</p>
 			<button>Learn More</button>
 		</div>
 		<div class="card">
 			<img src="img/card09-rene-aigner-charon-detail.jpg" alt="Charon">
-			<p class="card_description"></p>
+			<p class="card_description">
+				Charon is the ferryman of the Underworld in Greek mythology. He is responsible for carrying the souls of
+				the dead across the river Styx to the Underworld.
+			</p>
 			<button>Learn More</button>
 		</div>
 		<div class="card">
 			<img src="img/card10-sam-perin-flute-satyr.jpg" alt="Satyr">
-			<p class="card_description"></p>
+			<p class="card_description">
+				A Satyr is a creature with the upper body of a human and the lower body of a goat. They are known for
+				their love of music and dance. They are also known for their mischievous nature.
+			</p>
 			<button>Learn More</button>
 		</div>
 		<div class="card">
 			<img src="img/card11-wisnu-tan-rage-bellower-uplox-minotaur.jpg" alt="Minotaur">
-			<p class="card_description"></p>
+			<p class="card_description">
+				The Minotaur is a creature with the body of a man and the head of a bull. He is known for his strength and
+				was famously kept in the Labyrinth of Crete.
+			</p>
 			<button>Learn More</button>
 		</div>
 		<div class="card">
@@ -115,6 +144,11 @@
 	<footer>
 		<p>&copy; 2025 Tatenda Samudzi</p>
 	</footer>
+	<script>
+		document.querySelector('.hamburger').addEventListener('click', () => {
+			document.querySelector('nav ul').classList.toggle('active');
+		});
+	</script>
 </body>
 
 </html>
