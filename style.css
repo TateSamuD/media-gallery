@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+:root{
+	--main-color: slategray;
+	--secondary-color: rgb(58, 67, 75);
+	--text-color: rgb(192, 180, 159);
+}
+
 * {
 	font-family: 'Poppins', sans-serif;
 }
@@ -69,4 +75,51 @@ nav a:active {
 nav a.active {
 	color: rgb(255, 245, 227);
 	text-decoration: underline;
+}
+
+
+
+/*Footer */
+footer {
+	background-color: slategray;
+	color: white;
+	display: block;
+	clear: both;
+	width: 100%;
+	text-align: center;
+	padding: 0.5em 0;
+}
+
+/* Small screens */
+@media only screen and (max-width: 768px) {
+
+	body{
+		font-size: small;
+	}
+
+	article figure img {
+		float: none;
+		max-width: 75%;
+		height: auto;
+	}
+}
+
+/* Mobile S screens */
+@media only screen and (max-width: 480px) {
+
+	body{
+		font-size: x-small;
+	}
+
+	article{
+		width: auto;
+		padding: 15px;
+		margin: 20px;
+	}
+
+	article figure img {
+		float: none;
+		max-width: 100%;
+		height: auto;
+	}
 }
