@@ -9,6 +9,9 @@
 	--text-color-hover: rgb(243, 255, 227);
 	--main-font: 'Poppins', sans-serif;
 	--secondary-font: 'Libre Baskerville', serif;
+	--card-font: var(--secondary-font);
+	--card-font-size: 0.8em;
+	--card-font-weight: 400;
 }
 
 * {
@@ -35,6 +38,7 @@ nav {
 	right: 0;
 	width: 100%;
 	overflow: hidden;
+	padding: 0.5rem;
 }
 
 nav ul {
@@ -86,7 +90,39 @@ header {
 	justify-content: center;
 }
 
+.carousel {
+	position: relative;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	overflow: hidden;
+	justify-content: center;
+	align-items: center;
+}
+
+.carousel_control {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.carousel_container {
+	position: relative;
+	width: 100%;
+	max-width: 800px;
+	height: 40%;
+	overflow: hidden;
+}
+
+.carousel img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
 .arrow {
+	position: absolute;
+	top: 50%;
 	background: none;
 	border: none;
 	color: white;
@@ -117,15 +153,43 @@ div {
 	padding: 1em;
 }
 
+/* Container */
 .container {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 	flex-wrap: wrap;
 	justify-content: center;
 	background-color: transparent;
 }
 
+/* Card */
+.card {
+	background-color: var(--secondary-color);
+	color: var(--text-color);
+	margin: 20px;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+}
 
+.card img {
+	float: left;
+	width: 40%;
+	height: 70%;
+	object-fit: cover;
+	margin-bottom: 10px;
+}
 
+.card_description {
+	font-size: var(--card-font-size);
+	font-family: var(--card-font);
+	font-weight: var(--card-font-weight);
+}
+
+.card:hover {
+	transform: translateY(-5px);
+}
 
 /*Footer */
 footer {
