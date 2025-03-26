@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-:root{
+:root {
 	--main-color: slategray;
 	--secondary-color: rgb(58, 67, 75);
 	--text-color: rgb(192, 180, 159);
+	--text-color-active: rgb(255, 245, 227);
+	--text-color-hover: rgb(243, 255, 227);
+	--main-font: 'Poppins', sans-serif;
+	--secondary-font: 'Libre Baskerville', serif;
 }
 
 * {
-	font-family: 'Poppins', sans-serif;
+	font-family: var(--main-font);
 }
 
 html {
@@ -21,14 +25,10 @@ body {
 	padding: 0;
 }
 
-/*Header */
-header {
-	margin: 0;
-	left: 0;
-}
-
+/* Navigation */
 nav {
-	background-color: slategray;
+	background-color: var(--secondary-color);
+	display: flex;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -48,20 +48,21 @@ nav ul {
 li {
 	border-left: 1px solid #bbb;
 }
+
 li:first-child {
 	border-left: none;
- }
+}
 
 nav a {
 	float: right;
 	padding: 14px 16px;
 	text-decoration: none;
-	background-color: rgb(58, 67, 75);
+	background-color: var(--secondary-color);
 }
 
 nav a:link,
 nav a:visited {
-	color: rgb(192, 180, 159);
+	color: var(--text-color-hover);
 	text-decoration: none;
 }
 
@@ -72,10 +73,43 @@ nav a:active {
 }
 
 nav a.active {
-	color: rgb(255, 245, 227);
+	color: var(--text-color-active);
 	text-decoration: underline;
 }
 
+/*Header */
+header {
+	margin: 0;
+	margin-top: 20px;
+	left: 0;
+	display: flex;
+	justify-content: center;
+}
+
+.arrow {
+	background: none;
+	border: none;
+	color: white;
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.dots {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.dot {
+	width: 10px;
+	height: 10px;
+	background: white;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.dot.active {
+	background: var(--secondary-color);
+}
 
 div {
 	justify-content: center;
@@ -89,6 +123,8 @@ div {
 	justify-content: center;
 	background-color: transparent;
 }
+
+
 
 
 /*Footer */
@@ -106,7 +142,7 @@ footer {
 /* Small screens */
 @media only screen and (max-width: 768px) {
 
-	body{
+	body {
 		font-size: small;
 	}
 
@@ -120,11 +156,11 @@ footer {
 /* Mobile S screens */
 @media only screen and (max-width: 480px) {
 
-	body{
+	body {
 		font-size: x-small;
 	}
 
-	article{
+	article {
 		width: auto;
 		padding: 15px;
 		margin: 20px;
